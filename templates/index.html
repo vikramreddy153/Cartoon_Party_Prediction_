@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* CSS styles for the header and logo */
+        header {
+            background-color: #0a0a0a; /* Transparent black background */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        img.logo {
+            max-width: 250px; /* Increase the max width for a bigger logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* CSS styles for the footer */
+        footer {
+            background-color: #0a0a0a; /* Transparent black background */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Replace the text with an image -->
+        <img src="/static/LOGO123.png" alt="Party Prediction App Logo" class="logo">
+    </header>
+    <main>
+        <section class="prediction-section">
+            <h2 class="center-text">Predicted Winning Party</h2>
+            <p class="center-text">The predicted winning party is: <strong>{{ winning_party }}</strong></p>
+        </section>
+        <section class="accuracy-section">
+            <h2 class="center-text">Model Accuracy</h2>
+            <p class="center-text">The model accuracy on the test set is: <strong>{{ accuracy }}%</strong></p>
+        </section>
+    </main>
+    <footer>
+        <p class="center-text" >&copy; 2023 Party Prediction App</p>
+    </footer>
+</body>
+</html>
